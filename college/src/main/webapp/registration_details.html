@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/04/40/28/66/360_F_440286633_bvNYX5I6HRa7swCorzWCId6YYGJhMMgo.jpg');
+            background-size: 100%;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+         marquee h1 {
+        font-weight: bold;
+        color: black;
+        text-shadow: 2px 2px 4px white;
+    }
+    .logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 190px; /* Set the desired width */
+        height: 190px; /* Set the desired height */
+        background-image: url('https://yt3.googleusercontent.com/ytc/AOPolaTnDZi8nJ3asaFVsYE6Alx-B6u0vN1KpfJLSr2B=s900-c-k-c0x00ffffff-no-rj');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+        
+        .center {
+            text-align: center;
+            margin-left: 600px;
+            margin-top: 200px;
+            padding: 20px;
+            width: 30%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        input {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+     <center>   <h1 style="font-size: 50px;">Eluru College Of Engineering and Technology</h1> </center>
+    
+
+    <!-- Your header and navigation here -->
+<div class="logo"></div>
+
+    <div class="center">
+        <h1>Update Student Registration</h1>
+        <form action="update_registration.jsp" method="post">
+            <label for="id">Enter Student ID:</label>
+            <input type="text" id="id" name="id" required>
+            <button type="submit">Get Details</button>
+        </form>
+
+        <table>
+            <form action="update_details.jsp" method="post">
+                <!-- Display the details of the selected student here -->
+                            </form>
+        </table>
+    </div>
+
+    <!-- Your footer here -->
+</body>
+</html>

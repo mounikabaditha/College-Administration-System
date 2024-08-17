@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://cleanpublicdomain.com/wp-content/uploads/edd/2018/02/abstract-2829961-1560x1931.png?size=626&ext=jpg&ga=GA1.1.1022750868.1674831030&semt=sph.jpg?w=1380&t=st=1691036085~exp=1691036685~hmac=913b3f900053c4187c2cb3cc0c2c5ce3353eff69457c45028c8aa827f7d96511.jpg?w=1380&t=st=1690994097~exp=1690994697~hmac=9a4fc4c0f7615dfa0d2f5a89a674ba12398abd34cf61970c98a69e7fe27610fc.jpg?w=1060&t=st=1683685509~exp=1683686109~hmac=3e69a3a1b11b226a5372492a9f91084682ae0e3d58906bc0e0ab7ae23efdea58.jpg');
+        background-size: 100%;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    marquee h1 {
+        font-weight: bold;
+        color: black;
+        text-shadow: 2px 2px 4px white;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    table td {
+        padding: 10px 0;
+    }
+
+    table input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    a {
+        text-decoration: none;
+        color: #4CAF50;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .avatar {
+        width: 40%;
+        border-radius: 50%;
+        color: red;
+        text-shadow: 2px 2px 4px #000000;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    /* Media Query for Small Screens */
+    @media (max-width: 480px) {
+        table {
+            width: 100%;
+        }
+        .buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    .logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 190px; /* Set the desired width */
+        height: 190px; /* Set the desired height */
+        background-image: url('https://yt3.googleusercontent.com/ytc/AOPolaTnDZi8nJ3asaFVsYE6Alx-B6u0vN1KpfJLSr2B=s900-c-k-c0x00ffffff-no-rj');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Scrolling text at the top of the page -->
+    <marquee behavior="scroll" direction="left" scrollamount="25" style="position: fixed; top: 0; left: 0; width: 100%;">
+        <h1 style="font-size: 50px;">Eluru College Of Engineering and Technology</h1>
+    </marquee>
+
+    <!-- Logo div -->
+    <div class="logo"></div>
+
+    <div class="center">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="imgcontainer">
+                        <p class="avatar">
+                            
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="std.jsp" method="post" onsubmit="return validateLoginId()">
+                       
+                            <td >
+                                <div class="buttons">
+                                    
+                                   
+                                    <a href="changepin.html"><button type="button">Change Password</button></a>
+                                    <a href="registration_details.html"><button type="button">Registration Details</button></a>
+                                    <a href="marks_details.html"><button type="button">Marks Details</button></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

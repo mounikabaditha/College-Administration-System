@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Form - Step 1</title>
+    <style>
+       body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/003/557/257/non_2x/abstract-blue-and-gray-wave-background-free-vector.jpg');
+      background-size: 100%;
+    }
+	h1 {
+		color: red;
+		text-align: center;
+		margin-bottom: 20px;
+		
+	}
+	h2 {
+		color: black;
+		text-align: center;
+		margin-top: 50px;
+		}
+        form {
+            max-width: 600px; /* Increased width */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top:45px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="button"], input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover, input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #s1Fields {
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+       .field-container {
+            flex: 0.8; /* Adjusted width */
+        }
+        .display-button {
+            flex: 0.3; /* Adjusted width */
+            text-align: right;
+            }
+        .center-button {
+            display: flex;
+            justify-content: center;
+        }
+        .logo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 160px; /* Set the desired width */
+      height: 160px; /* Set the desired height */
+      background-image: url('https://yt3.googleusercontent.com/ytc/AOPolaTnDZi8nJ3asaFVsYE6Alx-B6u0vN1KpfJLSr2B=s900-c-k-c0x00ffffff-no-rj');
+      background-size: contain;
+      background-repeat: no-repeat;
+      }
+    
+    
+    </style>
+    <!-- Your existing CSS and other code here -->
+    <script>
+        function goToStep2() {
+            var rollNo = document.getElementById("rollNo").value;
+            var name = document.getElementById("name").value;
+            var fatherName = document.getElementById("fatherName").value;
+            var contact = document.getElementById("contact").value;
+            var currentYear = document.getElementById("currentYear").value;
+
+            window.location.href = "second-page.html" +
+                "?rollNo=" + encodeURIComponent(rollNo) +
+                "&name=" + encodeURIComponent(name) +
+                "&fatherName=" + encodeURIComponent(fatherName) +
+                "&contact=" + encodeURIComponent(contact) +
+                "&currentYear=" + encodeURIComponent(currentYear);
+        }
+    </script>
+</head>
+<body>
+<h1>Eluru College Of Engineering and Technology</h1>
+<h2>Backlogs Form - Step 1</h2>
+<div class="logo"></div>
+<form>
+    <!-- Existing form fields... -->
+    <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" required>
+        <br>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required>
+        <br>
+        
+       <div class="button-container">
+            <div class="field-container">
+                <label for="currentYear">Select the Current Year:</label>
+                <select id="currentYear" name="currentYear">
+                    <option value="1">1st Year </option>
+                    <option value="2">2nd Year </option>
+                    <option value="3">3rd Year </option>
+                    <option value="4">4th Year </option>
+                </select>
+            </div>
+    <div class="button-container">
+        <div class="display-button">
+            <input type="button" value="Next" onclick="goToStep2()">
+        </div>
+    </div>
+</form>
+<!-- Your existing script tag here -->
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<style>
+		body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://cleanpublicdomain.com/wp-content/uploads/edd/2018/02/abstract-2829961-1560x1931.png?size=626&ext=jpg&ga=GA1.1.1022750868.1674831030&semt=sph.jpg?w=1380&t=st=1691036085~exp=1691036685~hmac=913b3f900053c4187c2cb3cc0c2c5ce3353eff69457c45028c8aa827f7d96511.jpg?w=1380&t=st=1690994097~exp=1690994697~hmac=9a4fc4c0f7615dfa0d2f5a89a674ba12398abd34cf61970c98a69e7fe27610fc.jpg?w=1060&t=st=1683685509~exp=1683686109~hmac=3e69a3a1b11b226a5372492a9f91084682ae0e3d58906bc0e0ab7ae23efdea58.jpg');
+      background-size: 100%;
+    }
+     marquee h1 {
+            font-weight: bold;
+            color: black;
+            text-shadow: 2px 2px 4px white;
+        }
+      .center {
+        display: flex;
+        
+        justify-content: center;
+      }
+      h1 {
+		color: black;
+		text-align: center;
+		margin-bottom: 20px;
+		
+	}
+
+		table {
+			padding: 30px;
+			max-width: 400px;
+			margin: 30px;
+			align-items:center;
+		}
+
+		input[type=text], input[type=password] {
+			width: 80%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 30%;
+		}
+
+		button:hover {
+			opacity: 0.8;
+		}
+
+		.container {
+			padding: 16px;
+		}
+
+		.registerbtn {
+			background-color: #f44336;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 30%;
+		}
+
+		.registerbtn:hover {
+			opacity: 0.8;
+		}
+
+		.cancelbtn {
+			width: auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+			position: relative;
+		}
+		table {
+
+padding: 20px;
+
+max-width: 400px;
+
+margin: 20px;
+
+align-items:center;
+
+}
+
+		img.avatar {
+			width: 40%;
+			border-radius: 50%;
+			color:red;
+			text-shadow: 2px 2px 4px #000000;
+		}
+
+		.container {
+			padding: 16px;
+		}
+
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+		 .logo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 160px; /* Set the desired width */
+      height: 160px; /* Set the desired height */
+      background-image: url('https://yt3.googleusercontent.com/ytc/AOPolaTnDZi8nJ3asaFVsYE6Alx-B6u0vN1KpfJLSr2B=s900-c-k-c0x00ffffff-no-rj');
+      background-size: contain;
+      background-repeat: no-repeat;
+      }
+	</style>
+</head>
+<body>
+ <marquee behavior="scroll" direction="left" scrollamount="25">
+       <h1 style="font-size: 50px;">Eluru College Of Engineering and Technology</h1>
+   
+    </marquee><!-- Logo div -->
+  <div class="logo"></div>
+<div class="center">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div class="imgcontainer">
+                    <p class="avatar"><font color="red"><h1>LOGIN FORM</h1></font></p>
+                </div>
+            </td>
+        </tr>
+        <form action="login.jsp" method="post">
+            <tr>
+                <td><label for="username"><b>Username</b></label></td>
+                <td><input type="text" placeholder="Enter Username" name="username" required></td>
+                <br><br><br>
+            </tr>
+            <tr>
+                <td><label for="password"><b>Password</b></label></td>
+                <td><input type="password" placeholder="Enter Password" name="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Login</button>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="uregister.html"><button type="button" class="registerbtn">Register</button></a>
+                </td>
+            </tr>
+        </form>
+    </table>
+</div>
+</body>
+</html>

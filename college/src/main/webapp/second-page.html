@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Form - Step 2</title>
+    <style>
+        /* Style for the clickable text boxes */
+        .link-style {
+            border: none;
+            background-color: transparent;
+            color: blue; /* Change color as desired */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .link-style {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .link-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function displayFields() {
+            var selectedYear = document.getElementById("currentYear").textContent; // Get the current year
+            var rollNo = document.getElementById("rollNo").textContent;
+            var name = document.getElementById("name").textContent;
+            var fatherName = document.getElementById("fatherName").textContent;
+            var contact = document.getElementById("contact").textContent;
+
+            var inputFieldsHTML = "";
+
+            for (var year = 1; year <= selectedYear; year++) {
+                for (var semester = 1; semester <= 2; semester++) {
+                    var linkURL = `processselection.jsp?year=${year}&semester=${semester}&rollNo=${rollNo}&name=${name}&fatherName=${fatherName}&contact=${contact}&currentYear=${selectedYear}`;
+
+                    inputFieldsHTML += `
+                        <a class="link-style" href="${linkURL}">
+                            ${year}-${semester} (${selectedYear})
+                        </a>
+                        <br>
+                    `;
+                }
+            }
+
+            document.getElementById("s1Fields").innerHTML = inputFieldsHTML;
+        }
+
+        window.onload = function () {
+            var params = new URLSearchParams(window.location.search);
+            var currentYear = params.get("currentYear");
+            document.getElementById("currentYear").textContent = currentYear;
+            displayFields();
+        };
+    </script>
+</head>
+<body>
+    <h1>Eluru College Of Engineering and Technology</h1>
+    <h2>Backlogs Form - Step 2</h2>
+    <div class="logo"></div>
+    <form action="processselection.jsp" method="post">
+        <!-- Hidden fields to pass data to the next page -->
+        <input type="hidden" name="rollNo" id="rollNo">
+        <input type="hidden" name="name" id="name">
+        <input type="hidden" name="fatherName" id="fatherName">
+        <input type="hidden" name="contact" id="contact">
+        <input type="hidden" name="currentYear" id="currentYear">
+        
+        <div id="s1Fields">
+            <!-- Links will be dynamically inserted here based on selected year and semester -->
+        </div>
+        
+    </form>
+
+    <script>
+        // Retrieve data from URL parameters
+        var urlParams = new URLSearchParams(window.location.search);
+
+        // Display data in the HTML
+        document.getElementById("rollNo").textContent = urlParams.get("rollNo");
+        document.getElementById("name").textContent = urlParams.get("name");
+        document.getElementById("fatherName").textContent = urlParams.get("fatherName");
+        document.getElementById("contact").textContent = urlParams.get("contact");
+        document.getElementById("currentYear").textContent = urlParams.get("currentYear");
+    </script>
+</body>
+</html>
